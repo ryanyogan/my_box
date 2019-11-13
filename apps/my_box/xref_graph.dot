@@ -1,0 +1,13 @@
+digraph "xref graph" {
+  "lib/my_box.ex"
+  "lib/my_box/application.ex"
+  "lib/my_box/application.ex" -> "lib/my_box/repo.ex"
+  "lib/my_box/behaviours/storage_provider.ex"
+  "lib/my_box/repo.ex"
+  "lib/my_box/storage/provider.ex"
+  "lib/my_box/storage/provider.ex" -> "lib/my_box/storage/providers/google_cloud_storage/local.ex"
+  "lib/my_box/storage/providers/google_cloud_storage/local.ex" -> "lib/my_box/behaviours/storage_provider.ex" [label="(compile)"]
+  "lib/my_box/storage/providers/google_cloud_storage/local.ex"
+  "lib/my_box/storage/storage.ex"
+  "lib/my_box/storage/storage.ex" -> "lib/my_box/storage/provider.ex"
+}

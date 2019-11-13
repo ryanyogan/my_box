@@ -1,0 +1,31 @@
+digraph "xref graph" {
+  "lib/my_box_web.ex"
+  "lib/my_box_web/application.ex"
+  "lib/my_box_web/application.ex" -> "lib/my_box_web/endpoint.ex"
+  "lib/my_box_web/endpoint.ex" -> "lib/my_box_web.ex" [label="(compile)"]
+  "lib/my_box_web/endpoint.ex" -> "lib/my_box_web/router.ex"
+  "lib/my_box_web/router.ex" -> "lib/my_box_web.ex" [label="(compile)"]
+  "lib/my_box_web/router.ex" -> "lib/my_box_web/controllers/page_controller.ex"
+  "lib/my_box_web/controllers/page_controller.ex" -> "lib/my_box_web.ex" [label="(compile)"]
+  "lib/my_box_web/controllers/page_controller.ex" -> "lib/my_box_web/gettext.ex" [label="(compile)"]
+  "lib/my_box_web/channels/user_socket.ex"
+  "lib/my_box_web/controllers/page_controller.ex"
+  "lib/my_box_web/endpoint.ex"
+  "lib/my_box_web/gettext.ex"
+  "lib/my_box_web/router.ex"
+  "lib/my_box_web/views/error_helpers.ex"
+  "lib/my_box_web/views/error_helpers.ex" -> "lib/my_box_web/gettext.ex"
+  "lib/my_box_web/views/error_view.ex"
+  "lib/my_box_web/views/error_view.ex" -> "lib/my_box_web.ex" [label="(compile)"]
+  "lib/my_box_web/views/error_view.ex" -> "lib/my_box_web/gettext.ex" [label="(compile)"]
+  "lib/my_box_web/views/error_view.ex" -> "lib/my_box_web/views/error_helpers.ex" [label="(compile)"]
+  "lib/my_box_web/views/layout_view.ex"
+  "lib/my_box_web/views/layout_view.ex" -> "lib/my_box_web.ex" [label="(compile)"]
+  "lib/my_box_web/views/layout_view.ex" -> "lib/my_box_web/gettext.ex" [label="(compile)"]
+  "lib/my_box_web/views/layout_view.ex" -> "lib/my_box_web/router.ex"
+  "lib/my_box_web/views/layout_view.ex" -> "lib/my_box_web/views/error_helpers.ex" [label="(compile)"]
+  "lib/my_box_web/views/page_view.ex"
+  "lib/my_box_web/views/page_view.ex" -> "lib/my_box_web.ex" [label="(compile)"]
+  "lib/my_box_web/views/page_view.ex" -> "lib/my_box_web/gettext.ex" [label="(compile)"]
+  "lib/my_box_web/views/page_view.ex" -> "lib/my_box_web/views/error_helpers.ex" [label="(compile)"]
+}

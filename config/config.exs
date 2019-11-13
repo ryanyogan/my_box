@@ -22,7 +22,8 @@ config :my_box_web, MyBoxWeb.Endpoint,
 
 # Configure Mix tasks and generators
 config :my_box,
-  ecto_repos: [MyBox.Repo]
+  ecto_repos: [MyBox.Repo],
+  storage_providers: MyBox.Storage.Providers.GoogleCloudStorage.Local
 
 # Sample configuration:
 #
