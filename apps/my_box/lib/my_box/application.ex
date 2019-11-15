@@ -5,11 +5,18 @@ defmodule MyBox.Application do
 
   use Application
 
-  def start(_type, _args) do
-    children = [
-      MyBox.Repo
-    ]
+  alias MyBox.Storage.Supervisors.CacheSupervisor
 
-    Supervisor.start_link(children, strategy: :one_for_one, name: MyBox.Supervisor)
+  def start(_type, _args) do
+    import Supervisor.Spec, warn: false
+
+    Supervisor.start_link(
+      [
+        supervisor(MyBox.Repo, []),
+        supervisor(CacheSupervisor, [], name: CacheSupervisor)
+      ],
+      strategy: :one_for_one,
+      name: MyBox.Supervisor
+    )
   end
 end
