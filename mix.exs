@@ -13,7 +13,7 @@ defmodule MyBox.Umbrella.MixProject do
 
   defp deps do
     [
-      {:credo, "~> 0.3", only: [:dev, :test], runtime: false}
+      {:credo, "~> 1.0", only: [:dev, :test], runtime: false}
     ]
   end
 
