@@ -30,7 +30,7 @@ defmodule MyBoxWeb.MixProject do
 
   defp deps do
     [
-      {:phoenix, "~> 1.4.10"},
+      {:phoenix, "~> 1.7.0"},
       {:phoenix_pubsub, "~> 1.1"},
       {:phoenix_ecto, "~> 4.0"},
       {:phoenix_html, "~> 2.11"},
